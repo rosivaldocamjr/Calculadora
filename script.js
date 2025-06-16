@@ -12,7 +12,11 @@ function back() {
 function calcular() {
     var res = document.getElementById('res').innerHTML
     if(res) {
-        document.getElementById('res').innerHTML = eval(res)
+        try {
+            document.getElementById('res').innerHTML = eval(res)
+        } catch (e) {
+            document.getElementById('res').innerHTML = "Erro"
+        }
     } else {
         document.getElementById('res').innerHTML = "Nada"
     }
