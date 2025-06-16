@@ -1,6 +1,6 @@
 # Calculadora
 
-Projeto Calculadora feito com HTML, Css e JavaScript
+Projeto Calculadora feito com HTML, CSS e JavaScript
 
 Url do site: https://rosivaldocamjr.github.io/Calculadora/
 
