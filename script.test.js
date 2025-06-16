@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
+// Carrega e executa script.js no escopo global
+const scriptContent = fs.readFileSync(path.resolve(__dirname, 'script.js'), 'utf8');
+eval(scriptContent); // agora as funções estão acessíveis nos testes
+
 beforeEach(() => {
   document.body.innerHTML = '<p id="res"></p>';
-  const scriptContent = fs.readFileSync(path.resolve(__dirname, 'script.js'), 'utf8');
-  // eval in global scope to load functions
-  eval(scriptContent);
 });
 
 describe('calculator functions', () => {
