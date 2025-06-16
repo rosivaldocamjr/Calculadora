@@ -1,0 +1,17 @@
+Este projeto é uma calculadora simples feita em HTML, CSS e JavaScript.
+
+Estrutura dos arquivos principais:
+- **index.html**: arquivo de marcação com a estrutura da página. Contém a div principal, os botões da calculadora e referencia os arquivos de estilo e de script.
+- **style.css**: define o visual da calculadora (cores, tamanhos, posicionamento dos elementos etc.).
+- **script.js**: traz as funções que fazem a calculadora funcionar.
+- **script.test.js**: testes automatizados que usam Jest para verificar algumas funções do script.
+- **package.json**: configura o projeto Node para que os testes possam ser executados.
+
+### Detalhes do script.js
+O arquivo `script.js` define quatro funções simples:
+1. **insert(num)**: pega o que já está no parágrafo com id `res` e adiciona o valor `num` ao final. Assim cada clique de um botão adiciona um caractere.
+2. **clean()**: limpa o parágrafo, deixando o display vazio.
+3. **back()**: remove o último caractere exibido em `res`.
+4. **calcular()**: avalia a expressão escrita no display. Se a expressão for válida, usa `eval` para calcular o resultado. Se houver erro na avaliação, mostra "Erro". Se não houver nada para calcular, mostra "Nada".
+
+Essas funções são chamadas pelos botões definidos em `index.html`. A id `res` é o visor da calculadora.
